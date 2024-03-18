@@ -3,15 +3,9 @@ const titleInput = document.getElementById("title");
 const contentInput = document.getElementById("content");
 const submitButton = document.querySelector('form');
 
-function createAndRenderBlog() {
+const blogs = [];
 
-
-   
-}
-
-submitButton.addEventListener('submit', function(event) {
-  event.preventDefault();
-
+function renderForm(){
   const blog = {
     username: usernameInput.value,
     title: titleInput.value,
@@ -19,7 +13,12 @@ submitButton.addEventListener('submit', function(event) {
 };
 
 localStorage.setItem('blog', JSON.stringify(blog));
+blogs.push(blog);
+localStorage.setItem('blogs',JSON.stringify(blogs));
+}
 
+submitButton.addEventListener('submit', function(event) {
+  event.preventDefault();
   
   if (usernameInput.value === '') {
     alert('Email cannot be blank');
@@ -28,7 +27,11 @@ localStorage.setItem('blog', JSON.stringify(blog));
   } else if (contentInput.value === '') {
     alert('Content cannot be blank');
   } else {
-    window.location.href ="blog.html";
+    //window.location.href ="blog.html";
+    window.location.href ="https://travisjblack.github.io/Personal-Blog/blog.html";
+   
   }
+  
+  renderForm();
 });
 

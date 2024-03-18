@@ -1,10 +1,16 @@
+header {
+  display: flex;
+  justify-content:space-between;
+}
 
-input {
-  float: right;
+
+
+article {
+  margin: 25px;
+  border: white;
+  border-style: solid;
 }
-button {
-  float: right;
-}
+
 /* Dark Mode */
 .dark {
     background-color:black;
@@ -18,4 +24,8 @@ button {
     background-color: white;
     color: black;
     height: 100vh;
+  }
+
+  img {
+    width: 25px;
   }
