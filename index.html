@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/form.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css"/>
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <link rel="stylesheet" href="./assets/css/form.css"/>
+   
 </head>
-<body>
+<body class="container dark">
+    <header>
+        <button type="click" id="theme-switcher">
+            <img class ="pic" src="" id="showpic"/>
+        </button>
+    </header>
+    <div class="center">
     <figure>
-        <img src="./assets/images/blog.jpeg" alt="picture of blog details"> 
+        <img  src="./assets/images/blog.jpeg" alt="picture of blog details"> 
     </figure>
     <form>
         <h2>What's on your mind?</h2>
         <div>
             <label>Username</label>  
-            <input id="username"></input>   
+            <input class="fullWidth" id="username"></input>   
         </div>
         <div>
             <label>Title</label>  
-            <input id="title"></input>   
+            <input class="fullWidth" id="title"></input>   
         </div>
         <div>
             <label>Content</label>  
-            <textarea id="content"></textarea>   
+            <textarea class="fullWidth" id="content"></textarea>   
         </div>
-        <button type="submit">Submit</button>
+        <button class="fullWidth" type="submit">Submit</button>
     </form>
+</div>
     <script src="./assets/js/form.js"> </script>
     <script src="./assets/js/logic.js"></script>
 </body>

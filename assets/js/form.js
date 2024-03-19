@@ -1,10 +1,10 @@
+//gets html elements to be used
 const usernameInput = document.getElementById("username");
 const titleInput = document.getElementById("title");
 const contentInput = document.getElementById("content");
 const submitButton = document.querySelector('form');
 
-const blogs = [];
-
+//
 function renderForm(){
   const blog = {
     username: usernameInput.value,
@@ -12,26 +12,23 @@ function renderForm(){
     content: contentInput.value,
 };
 
+const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+
 localStorage.setItem('blog', JSON.stringify(blog));
 blogs.push(blog);
 localStorage.setItem('blogs',JSON.stringify(blogs));
 }
 
+//set up submit button for a click and checks for input in every field then redirects to new html
 submitButton.addEventListener('submit', function(event) {
   event.preventDefault();
-  
-  if (usernameInput.value === '') {
-    alert('Email cannot be blank');
-  } else if (titleInput.value === '') {
-    alert('Title cannot be blank');
-  } else if (contentInput.value === '') {
-    alert('Content cannot be blank');
-  } else {
-    //window.location.href ="blog.html";
-    window.location.href ="https://travisjblack.github.io/Personal-Blog/blog.html";
-   
+
+  if (usernameInput.value === '' || titleInput.value === '' || contentInput.value === '') {
+    alert('Please complete form.');
+  }  else {
+    renderForm();
+    window.location.href ="blog.html";
   }
   
-  renderForm();
 });
 

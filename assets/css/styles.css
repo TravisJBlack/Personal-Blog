@@ -1,0 +1,18 @@
+/* Dark Mode */
+.dark {
+    background-color:black;
+    height: 100vh;
+    color: #bebebe
+   
+  }
+
+  /* Light Mode */
+.light {
+    background-color: white;
+    color: black;
+    height: 100vh;
+  }
+
+  .pic {
+    width: 25px;
+  }

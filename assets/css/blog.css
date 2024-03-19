@@ -8,24 +8,8 @@ header {
 article {
   margin: 25px;
   border: white;
-  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
 }
 
-/* Dark Mode */
-.dark {
-    background-color:black;
-    height: 100vh;
-    color: #bebebe
-   
-  }
-
-  /* Light Mode */
-.light {
-    background-color: white;
-    color: black;
-    height: 100vh;
-  }
-
-  img {
-    width: 25px;
-  }
