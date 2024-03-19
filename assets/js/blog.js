@@ -2,8 +2,10 @@
 const backButton = document.querySelector('#backButton');
 const list = document.querySelector('#blog-list');
 
+//pulls blos from the storage 
 let allBlogs = JSON.parse(localStorage.getItem('blogs'));
-console.log(allBlogs);
+
+//runs through the array one index at a time and sets up new html elments for each item and styles them 
 for(let i = 0; i < allBlogs.length; i++){
 
   const title = document.createElement('h4');
@@ -28,6 +30,7 @@ for(let i = 0; i < allBlogs.length; i++){
 
 }
 
+//add functonallity to the back button to redirect to other html
 backButton.addEventListener('click', function(event) {
   event.preventDefault();
   window.location.href ="index.html";

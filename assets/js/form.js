@@ -4,7 +4,7 @@ const titleInput = document.getElementById("title");
 const contentInput = document.getElementById("content");
 const submitButton = document.querySelector('form');
 
-//
+//creats blogs and takes input from user and stores it and pushes it to local sotrage 
 function renderForm(){
   const blog = {
     username: usernameInput.value,
